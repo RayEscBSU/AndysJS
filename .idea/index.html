@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy's Transmission & Auto Repair</title>
+    <style>
+        header{
+            position: fixed;
+            width: 100%;
+            height: 400px;
+            top: 0;
+            z-index: 1000;
+            background-color:rgba(20, 93, 160, 1) ;
+            display: flex;
+            align-content: flex-start;
+        }
+        .headerText{
+            text-align: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .headerImage{
+            padding: 10px;
+        }
+        h1{
+            color: red;
+            font-family: "Brush Script MT", "Brush Script Std", cursive;
+            font-size: 80px;
+            margin-top: 50px; /* Add space above the header */
+            margin-bottom: 50px; /* Add space below the header */
+        }
+        h2{
+            font-family: "Brush Script MT", "Brush Script Std", cursive;
+            font-size: 50px;
+            margin-top: 5px; /* Add space above the header */
+            margin-bottom: 5px; /* Add space below the header */
+        }
+        body {
+            background-color: white; /* #145DA0 with 50% opacity */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .contentContainer {
+            width: 80%;
+            margin: 0 auto; /* Center the container horizontally */
+            background-color: white;
+            padding: 20px; /* Add padding */
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+       .content-Text{
+           margin-top: 400px;
+       }
+
+        .description {
+            width: calc(80% - 10px);
+            min-width: 360px;/* Calculate width to leave space for margins */
+            padding: 15px;
+            margin-bottom: 20px; /* Add bottom margin */
+            flex:2 40px;
+            font-family: Ayuthaya;
+            font-size: 15px;
+        }
+        .linkTo{
+            width: calc(50% - 10px);
+            min-width: 360px;/* Calculate width to leave space for margins */
+            padding: 15px;
+            margin-bottom: 20px; /* Add bottom margin */
+            font-size: 16px;
+            font-family: Ayuthaya;
+            font-size: 15px;
+        }
+        .hours {
+            width: calc(50% - 10px);
+            min-width: 360px;/* Calculate width to leave space for margins */
+            padding: 15px;
+            margin-bottom: 20px; /* Add bottom margin */
+            font-family: Ayuthaya;
+            font-size: 20px;
+        }
+        .info{
+            width: auto;
+            min-width: 360px;/* Calculate width to leave space for margins */
+            padding: 20px;
+            margin-bottom: 20px;
+            flex:2;
+            font-size: 20px;
+            font-family: Ayuthaya;
+        }
+        .description,
+        .linkTo,
+        .hours,
+        .info {
+            border-radius: 50px; /* Round div corners*/
+            background-color: #F5F5DC; /* assign color */
+        }
+        p{
+            font-size: 25px;
+        }
+        a{
+            font-size: 30px;
+            font-family: Ayuthaya;
+        }
+        footer {
+            text-align: center; /* Center-align the images within the footer */
+            margin-top: 20px; /* Add top margin */
+            padding-bottom: 150px; /* Add bottom padding */
+        }
+
+        footer img {
+            display: inline-block; /* Make the images inline with each other */
+            margin: 10px; /* Add some spacing between the images */
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contentContainer">
+
+        <header>
+            <div class="headerImage"><img src="/andys.png" alt="splashPhoto" height=100%;></div>
+            <div class="headerText"><h1>Andy's Transmission & Auto Repair</h1></div>
+        </header>
+
+        <div class="content-Text">
+
+            <div class="description">
+                <h2>About Us</h2>
+                <p>
+                    Andy's is a professional auto repair shop located at 321 Happy Day Blvd. in Caldwell. We
+                    specialize in
+                    repair and maintenance services for General Motors (GM), Ford, and other domestic vehicles. Our primary
+                    area of expertise lies in transmissions, offering honest and skillful work for all transmission-related
+                    issues.<br>
+                </p>
+                <p>
+                    At our facility, we pride ourselves on providing top-quality service and are certified by ACDelco, ASE,
+                    and O'Reilly. We are also an authorized retailer for ACDelco products, displaying our commitment to using
+                    high-quality parts for repairs.<br>
+                </p>
+                <p>
+                    We understand the value of customer satisfaction and strive to exceed expectations. As part of our
+                    dedication to convenient service, we honor extended warranties, ensuring that our customers' investments
+                    are protected. Our knowledgeable team members are fluent in both English and Spanish, ensuring clear
+                    communication with our diverse clientele.<br>
+                </p>
+                <p>
+                    Whether you need a simple repair or extensive maintenance, visit our shop or call us at 208-453-1968. Our skilled technicians are ready to provide exceptional service for all your automotive needs
+                <p/>
+            </div>
+            <div class="linkTo">
+                <h2>What we offer</h2>
+                <p>
+                    Transmission Repair ,   ASE Certified ,   Maintenance Services ,   Extended Warranties,   English and Spanish Communication
+                </p>
+                <h3>We Specialize in:</h3>
+                <p>
+                    O'Reilly Authorized Retailer ,   ACDelco Products ,   General Motors (GM) Repair ,   Ford Repair ,   Domestic Vehicle Repair,
+                </p>
+                <h3>See What Our Customers Are Saying</h3>
+                <a href="https://www.google.com/search?q=andys+transmission&oq=andys+transmission+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTISCAEQLhgKGK8BGMcBGIAEGI4FMg8IAhAuGAoYrwEYxwEYgAQyDwgDEC4YChivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTM0OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x54afb358bdab6d93:0xd458ea6529fe518c,1,,,,">Google Reviews</a>
+
+            </div>
+
+            <div class="hours">
+                <h2>Business hours</h2>
+                <ul>
+                Monday:
+                8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM
+                </ul>
+                <ul>
+                    Tuesday:
+                    8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM
+                </ul>
+                <ul>
+                    Wednesday:
+                    8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM
+                </ul>
+                <ul>
+                    Thursday:
+                    8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM
+                </ul>
+                <ul>
+                    Friday:
+                    8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM
+                </ul>
+                <ul>
+                    Saturday/Sunday:
+                    Closed
+                </ul>
+            </div>
+            <div class="info">
+                <h2>Contact Information</h2>
+                <h3>Phone number:</h3>
+                (208) 453-1968 <br>
+                <h3>Address</h3>
+                321 Happy Day Blvd<br>
+                Caldwell, ID 83607-8114<br>
+                <a href="https://www.google.com/maps/place/Andy's+Transmissions+%26+Auto/@43.6269175,-116.6339725,17z/data=!3m1!4b1!4m6!3m5!1s0x54afb358bdab6d93:0xd458ea6529fe518c!8m2!3d43.6269175!4d-116.6339725!16s%2Fg%2F1ts1mc0x?entry=ttu">Get directios</a>
+            </div>
+        </div>
+        <footer>
+            <img src="/BB.png" alt="BBPhoto" width="350px" height="auto">
+            <img src="/ACDelco.png" alt="ACDelco" width="400px" height="auto">
+            <img src="/ASE.png" alt="ASE" width="250px" height="auto">
+        </footer>
+    </div>
+</body>
+</html>
