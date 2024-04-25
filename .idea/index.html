@@ -8,10 +8,11 @@
         header{
             position: fixed;
             width: 100%;
+            min-width: 850px;
             height: 300px;
             top: 0;
             z-index: 1000;
-            background-color:rgba(20, 93, 160, 1) ;
+            background-color:rgba(20, 93, 160, 1) ; /*header color*/
             display: flex;
             align-content: flex-start;
         }
@@ -27,7 +28,7 @@
         h1{
             color: red;
             font-family: "Brush Script MT", "Brush Script Std", cursive;
-            font-size: 60px;
+            font-size: 70px;
              margin-bottom: 20px;
         }
         h2{
@@ -43,7 +44,7 @@
         }
         body {
             background-color: white; /* #145DA0 with 50% opacity */
-            min-width: 900px;
+            min-width: 700px;
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
         }
@@ -100,6 +101,11 @@
             font-size: 20px;
             font-family: Ayuthaya;
         }
+        div.message h2,
+        div.message h4 {
+            color: rgba(20, 93, 160, 1) ;
+        }
+
         .description,
         .message,
         .linkTo,
@@ -150,7 +156,9 @@
             <div class="message">
                 <h2>* * Messages From Andy: * *</h2>
                 <br><br>
-                <h3>Proudly serving the Treasure Valley for over two decades</h3>
+                <p>Get road-ready this summer – swing by for your tune-up!</p>
+                <br>
+                <h4>Proudly serving the Treasure Valley for over two decades</h4>
             </div>
             <div class="linkTo">
                 <h2>What we offer</h2>
