@@ -5,137 +5,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Transmission & Auto Repair</title>
     <style>
-        header{
-            position: fixed;
-            width: 100%;
-            min-width: 850px;
-            height: 300px;
-            top: 0;
-            z-index: 1000;
-            background-color:rgba(20, 93, 160, 1) ; /*header color*/
-            display: flex;
-            align-content: flex-start;
-        }
-        .headerText{
-            text-align: center;
-            justify-content: center;
-            flex-grow: 1;
-            max-width: 1000px;
-        }
-        .headerImage{
-            padding: 20px;
-        }
-        h1{
-            color: red;
-            font-family: "Brush Script MT", "Brush Script Std", cursive;
-            font-size: 70px;
-             margin-bottom: 20px;
-        }
-        h2{
-            font-family: "Brush Script MT", "Brush Script Std", cursive;
-            font-size: 50px;
-            margin-top: 5px; /* Add space above the header */
-            margin-bottom: 5px; /* Add space below the header */
-        }
-        h3{
-            font-size: 25px;
-            margin-top: 10px; /* Add space above the header */
-            margin-bottom: 10px; /* Add space below the header */
-        }
-        body {
-            background-color: white; /* #145DA0 with 50% opacity */
-            min-width: 700px;
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+        @media screen and (min-width: 400px) {
+            /* CSS rules for screens wider than 600px */
+            header{
+                position: fixed;
+                width: 100%;
+                padding: 5px;
+                height: 15vh;
+                top: 0;
+                z-index: 1000;
+                background-color:rgba(20, 93, 160, 1) ; /*header color*/
+                display: flex;
+                align-content: flex-start;
+            }
+            .headerText{
+                text-align: center;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .headerImage{
+                padding: 5px;
+            }
+            h1{
+                color: red;
+                font-family: "Brush Script MT", "Brush Script Std", cursive;
+                font-size: 5vh;
+                margin-bottom: 5px;
+            }
+            h2{
+                font-family: "Brush Script MT", "Brush Script Std", cursive;
+                font-size: 50px;
+                margin-top: 5px; /* Add space above the header */
+                margin-bottom: 5px; /* Add space below the header */
+            }
+            h3{
+                font-size: 25px;
+                margin-top: 10px; /* Add space above the header */
+                margin-bottom: 10px; /* Add space below the header */
+            }
+            body {
+                background-color: white; /* #145DA0 with 50% opacity */
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove default padding */
+            }
+
+            .contentContainer {
+                width: 80%;
+                margin: 0 auto; /* Center the container horizontally */
+                background-color: white;
+                padding: 20px; /* Add padding */
+                display:flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .content-Text{
+                margin-top: 0px;
+            }
+            .welcomePhoto{
+            }
+            img#wP{
+                margin-top: 9vh;
+                width: 100vw;
+            }
+
+            .description {
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 15px;
+                margin-bottom: 20px; /* Add bottom margin */
+                flex:2 40px;
+                font-family: Ayuthaya;
+                font-size: 15px;
+            }
+            .linkTo{
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 15px;
+                margin-bottom: 20px; /* Add bottom margin */
+                font-size: 16px;
+                font-family: Ayuthaya;
+                font-size: 15px;
+            }
+            .hours {
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 15px;
+                margin-bottom: 20px; /* Add bottom margin */
+                font-family: Ayuthaya;
+                font-size: 25px;
+            }
+            .info{
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 20px;
+                margin-bottom: 20px;
+                flex:2;
+                font-size: 20px;
+                font-family: Ayuthaya;
+            }
+            .message{
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 20px;
+                margin-bottom: 20px;
+                flex:2;
+                font-size: 20px;
+                font-family: Ayuthaya;
+            }
+            div.message h2,
+            div.message h4 {
+                color: rgba(20, 93, 160, 1) ;
+            }
+
+            .description,
+            .message,
+            .linkTo,
+            .hours,
+            .info {
+                width: calc(90%);
+                border-radius: 50px; /* Round div corners*/
+                background-color: #F5F5DC; /* assign color */
+                padding-left: 50px;
+            }
+            p{
+                font-size: 20px;
+            }
+            li,ul{
+                font-size: 20px;
+            }
+            a{
+                font-size: 25px;
+                font-family: Ayuthaya;
+            }
+            footer {
+                text-align: center; /* Center-align the images within the footer */
+                margin-top: 20px; /* Add top margin */
+                padding-bottom: 150px; /* Add bottom padding */
+            }
+
+            footer img {
+                display: inline-block; /* Make the images inline with each other */
+                margin: 10px; /* Add some spacing between the images */
+
+            }
         }
 
-        .contentContainer {
-            width: 80%;
-            margin: 0 auto; /* Center the container horizontally */
-            background-color: white;
-            padding: 20px; /* Add padding */
-            display:flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-       .content-Text{
-           margin-top: 300px;
-       }
+        @media screen and (min-width: 900px) {
+            /* CSS rules for screens wider than 900px */
+            header{
+                position: fixed;
+                width: 100%;
+                padding: 20px;
+                height: 225px;
+                top: 0;
+                z-index: 1000;
+                background-color:rgba(20, 93, 160, 1) ; /*header color*/
+                display: flex;
+                align-content: flex-start;
+            }
+            .headerText{
+                text-align: center;
+                justify-content: center;
+                flex-grow: 1;
+                max-width: 1000px;
+            }
+            .headerImage{
+                padding: 20px;
+            }
+            h1{
+                color: red;
+                font-family: "Brush Script MT", "Brush Script Std", cursive;
+                font-size: 70px;
+                margin-bottom: 20px;
+            }
+            h2{
+                font-family: "Brush Script MT", "Brush Script Std", cursive;
+                font-size: 50px;
+                margin-top: 5px; /* Add space above the header */
+                margin-bottom: 5px; /* Add space below the header */
+            }
+            h3{
+                font-size: 25px;
+                margin-top: 10px; /* Add space above the header */
+                margin-bottom: 10px; /* Add space below the header */
+            }
+            body {
+                background-color: white; /* #145DA0 with 50% opacity */
+                min-width: 700px;
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove default padding */
+            }
 
-        .description {
-            min-width: 360px;/* Calculate width to leave space for margins */
-            padding: 15px;
-            margin-bottom: 20px; /* Add bottom margin */
-            flex:2 40px;
-            font-family: Ayuthaya;
-            font-size: 15px;
-        }
-        .linkTo{
-            min-width: 360px;/* Calculate width to leave space for margins */
-            padding: 15px;
-            margin-bottom: 20px; /* Add bottom margin */
-            font-size: 16px;
-            font-family: Ayuthaya;
-            font-size: 15px;
-        }
-        .hours {
-            min-width: 360px;/* Calculate width to leave space for margins */
-            padding: 15px;
-            margin-bottom: 20px; /* Add bottom margin */
-            font-family: Ayuthaya;
-            font-size: 25px;
-        }
-        .info{
-            min-width: 360px;/* Calculate width to leave space for margins */
-            padding: 20px;
-            margin-bottom: 20px;
-            flex:2;
-            font-size: 20px;
-            font-family: Ayuthaya;
-        }
-        .message{
-            min-width: 360px;/* Calculate width to leave space for margins */
-            padding: 20px;
-            margin-bottom: 20px;
-            flex:2;
-            font-size: 20px;
-            font-family: Ayuthaya;
-        }
-        div.message h2,
-        div.message h4 {
-            color: rgba(20, 93, 160, 1) ;
-        }
+            .contentContainer {
+                width: 80%;
+                margin: 0 auto; /* Center the container horizontally */
+                background-color: white;
+                padding: 20px; /* Add padding */
+                display:flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .content-Text{
+                margin-top: 0px;
+            }
+            .welcomePhoto{
+                margin-top:0px;
+            }
+            img#wP{
+                width: 100vw;
+            }
+            .description {
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 15px;
+                margin-bottom: 20px; /* Add bottom margin */
+                flex:2 40px;
+                font-family: Ayuthaya;
+                font-size: 15px;
+            }
+            .linkTo{
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 15px;
+                margin-bottom: 20px; /* Add bottom margin */
+                font-size: 16px;
+                font-family: Ayuthaya;
+                font-size: 15px;
+            }
+            .hours {
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 15px;
+                margin-bottom: 20px; /* Add bottom margin */
+                font-family: Ayuthaya;
+                font-size: 25px;
+            }
+            .info{
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 20px;
+                margin-bottom: 20px;
+                flex:2;
+                font-size: 20px;
+                font-family: Ayuthaya;
+            }
+            .message{
+                min-width: 360px;/* Calculate width to leave space for margins */
+                padding: 20px;
+                margin-bottom: 20px;
+                flex:2;
+                font-size: 20px;
+                font-family: Ayuthaya;
+            }
+            div.message h2,
+            div.message h4 {
+                color: rgba(20, 93, 160, 1) ;
+            }
 
-        .description,
-        .message,
-        .linkTo,
-        .hours,
-        .info {
-            width: calc(90%);
-            border-radius: 50px; /* Round div corners*/
-            background-color: #F5F5DC; /* assign color */
-            padding-left: 50px;
-        }
-        p{
-            font-size: 20px;
-        }
-        li,ul{
-            font-size: 20px;
-        }
-        a{
-            font-size: 25px;
-            font-family: Ayuthaya;
-        }
-        footer {
-            text-align: center; /* Center-align the images within the footer */
-            margin-top: 20px; /* Add top margin */
-            padding-bottom: 150px; /* Add bottom padding */
-        }
+            .description,
+            .message,
+            .linkTo,
+            .hours,
+            .info {
+                width: calc(90%);
+                border-radius: 50px; /* Round div corners*/
+                background-color: #F5F5DC; /* assign color */
+                padding-left: 50px;
+            }
+            p{
+                font-size: 20px;
+            }
+            li,ul{
+                font-size: 20px;
+            }
+            a{
+                font-size: 25px;
+                font-family: Ayuthaya;
+            }
+            footer {
+                text-align: center; /* Center-align the images within the footer */
+                margin-top: 20px; /* Add top margin */
+                padding-bottom: 150px; /* Add bottom padding */
+            }
 
-        footer img {
-            display: inline-block; /* Make the images inline with each other */
-            margin: 10px; /* Add some spacing between the images */
+            footer img {
+                display: inline-block; /* Make the images inline with each other */
+                margin: 10px; /* Add some spacing between the images */
 
+            }
         }
     </style>
 </head>
@@ -144,15 +292,16 @@
     <div class="contentContainer">
 
         <header>
-            <div class="headerImage"><img src="/andys.png" alt="splashPhoto" height=100%;></div>
+<!--             <div class="headerImage"><img src="/andys.png" alt="splashPhoto" height=100%;></div> -->
             <div class="headerText">
                 <h1>Andy's Transmission &<br> Auto Repair</h1>
             </div>
 
         </header>
-
+        <div class="welcomePhoto">
+            <img id="wP" src="/s1.png" alt="welcomePhoto">
+        </div>
         <div class="content-Text">
-
             <div class="message">
                 <h2>* * Messages From Andy: * *</h2>
                 <br><br>
