@@ -5,382 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Transmission & Auto Repair</title>
     <style>
-        @media screen and (min-width: 400px) {
-            /* CSS rules for screens wider than 600px */
-            header{
-                position: fixed;
-                width: 100%;
-                padding: 5px;
-                height: 15vh;
-                top: 0;
-                z-index: 1000;
-                background-color:rgba(20, 93, 160, 1) ; /*header color*/
-                display: flex;
-                align-content: flex-start;
-            }
-            .headerText{
-                text-align: center;
-                justify-content: center;
-                flex-grow: 1;
-            }
-            .headerImage{
-                padding: 5px;
-            }
-            h1{
-                color: red;
-                font-family: "Brush Script MT", "Brush Script Std", cursive;
-                font-size: 5vh;
-                margin-bottom: 5px;
-            }
-            h2{
-                font-family: "Brush Script MT", "Brush Script Std", cursive;
-                font-size: 50px;
-                margin-top: 5px; /* Add space above the header */
-                margin-bottom: 5px; /* Add space below the header */
-            }
-            h3{
-                font-size: 25px;
-                margin-top: 10px; /* Add space above the header */
-                margin-bottom: 10px; /* Add space below the header */
-            }
-            body {
-                background-color: white; /* #145DA0 with 50% opacity */
-                margin: 0; /* Remove default margin */
-                padding: 0; /* Remove default padding */
-            }
-
-            .contentContainer {
-                width: 80%;
-                margin: 0 auto; /* Center the container horizontally */
-                background-color: white;
-                padding: 20px; /* Add padding */
-                display:flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .content-Text{
-                margin-top: 0px;
-            }
-            .welcomePhoto{
-            }
-            img#wP{
-                margin-top: 9vh;
-                width: 100vw;
-            }
-
-            .description {
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 15px;
-                margin-bottom: 20px; /* Add bottom margin */
-                flex:2 40px;
-                font-family: Ayuthaya;
-                font-size: 15px;
-            }
-            .linkTo{
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 15px;
-                margin-bottom: 20px; /* Add bottom margin */
-                font-size: 16px;
-                font-family: Ayuthaya;
-                font-size: 15px;
-            }
-            .hours {
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 15px;
-                margin-bottom: 20px; /* Add bottom margin */
-                font-family: Ayuthaya;
-                font-size: 25px;
-            }
-            .info{
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 20px;
-                margin-bottom: 20px;
-                flex:2;
-                font-size: 20px;
-                font-family: Ayuthaya;
-            }
-            .message{
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 20px;
-                margin-bottom: 20px;
-                flex:2;
-                font-size: 20px;
-                font-family: Ayuthaya;
-            }
-            div.message h2,
-            div.message h4 {
-                color: rgba(20, 93, 160, 1) ;
-            }
-
-            .description,
-            .message,
-            .linkTo,
-            .hours,
-            .info {
-                width: calc(90%);
-                border-radius: 50px; /* Round div corners*/
-                background-color: #F5F5DC; /* assign color */
-                padding-left: 50px;
-            }
-            p{
-                font-size: 20px;
-            }
-            li,ul{
-                font-size: 20px;
-            }
-            a{
-                font-size: 25px;
-                font-family: Ayuthaya;
-            }
-            footer {
-                text-align: center; /* Center-align the images within the footer */
-                margin-top: 20px; /* Add top margin */
-                padding-bottom: 150px; /* Add bottom padding */
-            }
-
-            footer img {
-                display: inline-block; /* Make the images inline with each other */
-                margin: 10px; /* Add some spacing between the images */
-
-            }
+        /* Base styles */
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(20, 93, 160, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .headerText {
+            flex-grow: 1;
+        }
+        h1 {
+            color: red;
+            font-family: "Brush Script MT", "Brush Script Std", cursive;
+            margin: 0;
+        }
+        .contentContainer {
+            width: 80%;
+            max-width: 1200px; /* Set max-width for the container */
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px; /* Adjust based on header height */
+        }
+        .content-Text {
+            margin-top: 0px;
+        }
+        .welcomePhoto img {
+            width: 100%;
+        }
+        .description, .linkTo, .hours, .info, .message {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 50px;
+            background-color: #F5F5DC;
+        }
+        p, li, ul, a {
+            font-size: 20px;
+            font-family: Ayuthaya;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 150px;
+        }
+        footer img {
+            display: inline-block;
+            margin: 10px;
+        }
+        #map-container {
+            padding: 10px;
         }
 
+        /* Media Queries */
+        @media screen and (min-width: 400px) {
+            header {
+                padding: 5px;
+                height: auto;
+            }
+            h1 {
+                font-size: 5vh;
+            }
+        }
         @media screen and (min-width: 900px) {
-            /* CSS rules for screens wider than 900px */
-            header{
-                position: fixed;
-                width: 100%;
+            header {
                 padding: 20px;
-                height: 225px;
-                top: 0;
-                z-index: 1000;
-                background-color:rgba(20, 93, 160, 1) ; /*header color*/
-                display: flex;
-                align-content: flex-start;
+                height: auto;
             }
-            .headerText{
-                text-align: center;
-                justify-content: center;
-                flex-grow: 1;
-                max-width: 1000px;
-            }
-            .headerImage{
-                padding: 20px;
-            }
-            h1{
-                color: red;
-                font-family: "Brush Script MT", "Brush Script Std", cursive;
-                font-size: 70px;
-                margin-bottom: 20px;
-            }
-            h2{
-                font-family: "Brush Script MT", "Brush Script Std", cursive;
+            h1 {
                 font-size: 50px;
-                margin-top: 5px; /* Add space above the header */
-                margin-bottom: 5px; /* Add space below the header */
             }
-            h3{
-                font-size: 25px;
-                margin-top: 10px; /* Add space above the header */
-                margin-bottom: 10px; /* Add space below the header */
-            }
-            body {
-                background-color: white; /* #145DA0 with 50% opacity */
-                min-width: 700px;
-                margin: 0; /* Remove default margin */
-                padding: 0; /* Remove default padding */
-            }
-
-            .contentContainer {
-                width: 80%;
-                margin: 0 auto; /* Center the container horizontally */
-                background-color: white;
-                padding: 20px; /* Add padding */
-                display:flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .content-Text{
-                margin-top: 0px;
-            }
-            .welcomePhoto{
-                margin-top:0px;
-            }
-            img#wP{
-                width: 100vw;
-            }
-            .description {
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 15px;
-                margin-bottom: 20px; /* Add bottom margin */
-                flex:2 40px;
-                font-family: Ayuthaya;
-                font-size: 15px;
-            }
-            .linkTo{
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 15px;
-                margin-bottom: 20px; /* Add bottom margin */
-                font-size: 16px;
-                font-family: Ayuthaya;
-                font-size: 15px;
-            }
-            .hours {
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 15px;
-                margin-bottom: 20px; /* Add bottom margin */
-                font-family: Ayuthaya;
-                font-size: 25px;
-            }
-            .info{
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 20px;
-                margin-bottom: 20px;
-                flex:2;
-                font-size: 20px;
-                font-family: Ayuthaya;
-            }
-            .message{
-                min-width: 360px;/* Calculate width to leave space for margins */
-                padding: 20px;
-                margin-bottom: 20px;
-                flex:2;
-                font-size: 20px;
-                font-family: Ayuthaya;
-            }
-            div.message h2,
-            div.message h4 {
-                color: rgba(20, 93, 160, 1) ;
-            }
-
-            .description,
-            .message,
-            .linkTo,
-            .hours,
-            .info {
-                width: calc(90%);
-                border-radius: 50px; /* Round div corners*/
-                background-color: #F5F5DC; /* assign color */
-                padding-left: 50px;
-            }
-            p{
-                font-size: 20px;
-            }
-            li,ul{
-                font-size: 20px;
-            }
-            a{
-                font-size: 25px;
-                font-family: Ayuthaya;
-            }
-            footer {
-                text-align: center; /* Center-align the images within the footer */
-                margin-top: 20px; /* Add top margin */
-                padding-bottom: 150px; /* Add bottom padding */
-            }
-
-            footer img {
-                display: inline-block; /* Make the images inline with each other */
-                margin: 10px; /* Add some spacing between the images */
-
+            .description, .linkTo, .hours, .info, .message {
+                width: 100%;
+                margin: 10px;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="contentContainer">
-
-        <header>
-<!--             <div class="headerImage"><img src="/andys.png" alt="splashPhoto" height=100%;></div> -->
-            <div class="headerText">
-                <h1>Andy's Transmission &<br> Auto Repair</h1>
-            </div>
-
-        </header>
-        <div class="welcomePhoto">
-            <img id="wP" src="/s1.png" alt="welcomePhoto">
+<div class="contentContainer">
+    <header>
+        <div class="headerText">
+            <h1>Andy's Transmission &<br> Auto Repair</h1>
         </div>
-        <div class="content-Text">
-            <div class="message">
-                <h2>* * Messages From Andy: * *</h2>
-                <br><br>
-                <p>Get road-ready this summer – swing by for your tune-up!</p>
-                <br>
-                <h4>Proudly serving the Treasure Valley for over two decades</h4>
-            </div>
-            <div class="linkTo">
-                <h2>What we offer</h2>
-                <h3>Our Services</h3>
-                <ul>
-                    <li>Comprehensive Maintenance Services</li>
-                    <li>Extended Warranties for Added Peace of Mind</li>
-                    <li>Precision Transmission Repair</li>
-                    <li>Expertise in Domestic Vehicle Repair</li>
-                    <li>Specialized General Motors (GM) Repair</li>
-                    <li>Specialized Ford Repair</li>
-                    <li>ASE Certification: Ensuring Quality and Expertise</li>
-                    <li>Bilingual Communication: English and Spanish</li>
-                </ul>
-                <h3>Our Products</h3>
-                <ul>
-                    <li>Authorized O'Reilly Parts Retailer</li>
-                    <li>Premium ACDelco Parts</li>
-                </ul>
-                <h3>Hear Directly From Our Satisfied Customers</h3>
-                <a href="https://www.google.com/search?q=andys+transmission&oq=andys+transmission+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTISCAEQLhgKGK8BGMcBGIAEGI4FMg8IAhAuGAoYrwEYxwEYgAQyDwgDEC4YChivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTM0OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x54afb358bdab6d93:0xd458ea6529fe518c,1,,,,">Google Reviews</a>
-
-            </div>
-
-            <div class="hours">
-                <h2>Business hours</h2>
-                <ul>
-                Monday:     8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM<br>
-                Tuesday:    8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM<br>
-                Wednesday:  8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM<br>
-                Thursday:   8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM<br>
-                Friday:     8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM<br>
-                Saturday/Sunday:  Closed<br>
-                </ul>
-            </div>
-            <div class="info">
-                <h2>Contact Information</h2>
-                <h3>Phone number:</h3>
-                <p>(208) 453-1968 <br></p>
-                <h3>Address</h3>
-                <a href="https://www.google.com/maps/place/Andy's+Transmissions+%26+Auto/@43.6269175,-116.6339725,17z/data=!3m1!4b1!4m6!3m5!1s0x54afb358bdab6d93:0xd458ea6529fe518c!8m2!3d43.6269175!4d-116.6339725!16s%2Fg%2F1ts1mc0x?entry=ttu">321 Happy Day Blvd<br>
-                    Caldwell, ID 83607-8114<br></a>
-            </div>
-            <div class="description">
-                <h2>About Us</h2>
-                <p>
-                    Andy's is a professional auto repair shop located at 321 Happy Day Blvd. in Caldwell. We
-                    specialize in
-                    repair and maintenance services for General Motors (GM), Ford, and other domestic vehicles. Our primary
-                    area of expertise lies in transmissions, offering honest and skillful work for all transmission-related
-                    issues.<br>
-                </p>
-                <p>
-                    At our facility, we pride ourselves on providing top-quality service and are certified by ACDelco, ASE,
-                    and O'Reilly. We are also an authorized retailer for ACDelco products, displaying our commitment to using
-                    high-quality parts for repairs.<br>
-                </p>
-                <p>
-                    We understand the value of customer satisfaction and strive to exceed expectations. As part of our
-                    dedication to convenient service, we honor extended warranties, ensuring that our customers' investments
-                    are protected. Our knowledgeable team members are fluent in both English and Spanish, ensuring clear
-                    communication with our diverse clientele.<br>
-                </p>
-                <p>
-                    Whether you need a simple repair or extensive maintenance, visit our shop or call us at 208-453-1968. Our skilled technicians are ready to provide exceptional service for all your automotive needs
-                <p/>
-            </div>
-        </div>
-        <footer>
-            <img src="/BB.png" alt="BBPhoto" width="350px" height="auto">
-            <img src="/ACDelco.png" alt="ACDelco" width="400px" height="auto">
-            <img src="/ASE.png" alt="ASE" width="250px" height="auto">
-        </footer>
+    </header>
+    <div class="welcomePhoto">
+        <img id="wP" src="/s1.png" alt="welcomePhoto">
     </div>
+    <div class="content-Text">
+        <div class="message">
+            <h2>* * Messages From Andy: * *</h2>
+            <br><br>
+            <p>Get road-ready this summer – swing by for your tune-up!</p>
+            <br>
+            <h4>Proudly serving the Treasure Valley for over two decades</h4>
+        </div>
+        <div class="linkTo">
+            <h2>What we offer</h2>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Comprehensive Maintenance Services</li>
+                <li>Extended Warranties for Added Peace of Mind</li>
+                <li>Precision Transmission Repair</li>
+                <li>Expertise in Domestic Vehicle Repair</li>
+                <li>Specialized General Motors (GM) Repair</li>
+                <li>Specialized Ford Repair</li>
+                <li>ASE Certification: Ensuring Quality and Expertise</li>
+                <li>Bilingual Communication: English and Spanish</li>
+            </ul>
+            <h3>Our Products</h3>
+            <ul>
+                <li>Authorized O'Reilly Parts Retailer</li>
+                <li>Premium ACDelco Parts</li>
+            </ul>
+            <h3>Hear Directly From Our Satisfied Customers</h3>
+            <a href="https://www.google.com/search?q=andys+transmission&oq=andys+transmission+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTISCAEQLhgKGK8BGMcBGIAEGI4FMg8IAhAuGAoYrwEYxwEYgAQyDwgDEC4YChivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTM0OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x54afb358bdab6d93:0xd458ea6529fe518c,1,,,,">Google Reviews</a>
+        </div>
+        <div class="hours">
+            <h2>Business hours</h2>
+            <ul>
+                <li>Monday: 8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM</li>
+                <li>Tuesday: 8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM</li>
+                <li>Wednesday: 8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM</li>
+                <li>Thursday: 8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM</li>
+                <li>Friday: 8:00 AM - 12:00 PM, 1:00 PM - 5:30 PM</li>
+                <li>Saturday/Sunday: Closed</li>
+            </ul>
+        </div>
+        <div class="info">
+            <h2>Contact Information</h2>
+            <h3>Phone number:</h3>
+            <p>(208) 453-1968</p>
+            <h3>Address</h3>
+            <a href="https://www.google.com/maps/place/Andy's+Transmissions+%26+Auto/@43.6269175,-116.6339725,17z/data=!3m1!4b1!4m6!3m5!1s0x54afb358bdab6d93:0xd458ea6529fe518c!8m2!3d43.6269175!4d-116.6339725!16s%2Fg%2F1ts1mc0x?entry=ttu">321 Happy Day Blvd<br>
+                Caldwell, ID 83607-8114</a>
+            <div id="map-container">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.728626993163!2d-116.6339725!3d43.6269175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54afb358bdab6d93%3A0xd458ea6529fe518c!2sAndy%27s%20Transmissions%20%26%20Auto!5e0!3m2!1sen!2sus!4v1593820019375!5m2!1sen!2sus"
+                        width="100%"
+                        height="450"
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0">
+                </iframe>
+            </div>
+        </div>
+        <div class="description">
+            <h2>About Us</h2>
+            <p>Andy's is a professional auto repair shop located at 321 Happy Day Blvd. in Caldwell. We specialize in repair and maintenance services for General Motors (GM), Ford, and other domestic vehicles. Our primary area of expertise lies in transmissions, offering honest and skillful work for all transmission-related issues.</p>
+            <p>At our facility, we pride ourselves on providing top-quality service and are certified by ACDelco, ASE, and O'Reilly. We are also an authorized retailer for ACDelco products, displaying our commitment to using high-quality parts for repairs.</p>
+            <p>We understand the value of customer satisfaction and strive to exceed expectations. As part of our dedication to convenient service, we honor extended warranties, ensuring that our customers' investments are protected. Our knowledgeable team members are fluent in both English and Spanish, ensuring clear communication with our diverse clientele.</p>
+            <p>Whether you need a simple repair or extensive maintenance, visit our shop or call us at 208-453-1968. Our skilled technicians are ready to provide exceptional service for all your automotive needs.</p>
+        </div>
+    </div>
+    <footer>
+        <img src="/BB.png" alt="BBPhoto" width="350px" height="auto">
+        <img src="/ACDelco.png" alt="ACDelco" width="400px" height="auto">
+        <img src="/ASE.png" alt="ASE" width="250px" height="auto">
+    </footer>
+</div>
 </body>
 </html>
